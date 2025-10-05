@@ -211,6 +211,7 @@ public class AllStartsPattern {
 
         System.out.print("Enter n : " );
         int n = scn.nextInt();
+        // int n = 7;
         
         // SquareStar(n);
         // HollowSquareStar(n);
