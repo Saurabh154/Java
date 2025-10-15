@@ -7,6 +7,7 @@ class InnerA {
     }
 
     InnerA(int a, int b){
+
         this();
         i=a;
         j=b;
