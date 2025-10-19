@@ -205,6 +205,40 @@ public class AllStartsPattern {
         System.out.println();
     }
 
+    static void MirroredDiamond(int n){
+        System.out.println("Mirrored Diamond Star Pattern ");
+
+        // int stars = 1;
+        int spaces = n-1;
+        for(int i=1; i<=n; i++){
+            // print spaces
+            for(int k=1; k<=spaces ; k++){
+                System.out.print(" ");
+            }
+
+            // star printing
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+           
+            spaces--;
+
+            // print space
+            int midspace = n-1;
+
+            for(int j=1; j<=midspace; j++){
+                System.out.print(" ");
+            }
+
+            // star printing
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            midspace--;
+
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         
         Scanner scn = new Scanner(System.in);
@@ -222,7 +256,8 @@ public class AllStartsPattern {
         // PyramidStar(n);
         // HollowPyramidStar(n);
         // DiamondStar(n);
-        HollowDiamondStar(n);
+        // HollowDiamondStar(n);
+        MirroredDiamond(n);
 
     }
 }
