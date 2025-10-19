@@ -25,5 +25,18 @@ public class MapDemo {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
 
+        System.out.println(userMap.containsKey(1));
+        System.out.println(userMap.containsValue("Alice"));
+
+        System.out.println("Keys in the map:");
+        for(Integer key : userMap.keySet()){
+            System.out.println(key);
+        }
+
+        System.out.println("Values in the map:");
+        for(String value : userMap.values()){
+            System.out.println(value);
+        }
+
     }
 }

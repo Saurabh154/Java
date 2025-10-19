@@ -6,6 +6,7 @@ import java.util.List;
 
 public class IteratingDemo {
     public static void main(String[] args) {
+
         List<String> users = new ArrayList<>();
         users.add("Alice");
         users.add("Saurabh");
