@@ -95,6 +95,30 @@ public class Main {
 //                        break;
 //
                     case 4:
+                        System.out.println("Enter amount u want to withdraw:");
+                        int withdrwaAmt = sc.nextInt();
+                        boolean flag1 = false;
+
+                        System.out.println("Enter Customer Account Number:");
+                        long userAccn= sc.nextLong();
+                        for (int i=0; i<account_counter; i++){
+                            if(account[i].acNum == userAccn){
+                                account[i].initial_amt -= withdrwaAmt;
+                                flag1 = true;
+                            }
+                        }
+                        if(!flag1){
+                            System.out.println("Amount Withdrawal successfully....");
+                        }
+
+                        System.out.println();
+                        System.out.println();
+                        System.out.println("9].GO BACK TO MAIN MENU");
+                        System.out.println("0].EXIT");
+                        choice = sc.nextInt();
+                        break;
+//
+                    case 5:
                         for (int i = 0; i < account_counter; i++) {
                             account[i].getDetails();
                             System.out.println();
@@ -105,18 +129,6 @@ public class Main {
                         System.out.println("0].EXIT");
                         choice = sc.nextInt();
                         break;
-//
-//                    case 5:
-//                        for (int i = 0; i < employees_counter; i++) {
-//                            employee[i].get_details();
-//                            System.out.println();
-//                            System.out.println();
-//                        }
-//                        System.out.println();
-//                        System.out.println("9].GO BACK TO MAIN MENU");
-//                        System.out.println("0].EXIT");
-//                        choice = sc.nextInt();
-//                        break;
 //
                     case 6:
                         System.out.println("Enter Customer Account Number:");

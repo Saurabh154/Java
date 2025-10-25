@@ -21,7 +21,7 @@ public class Test2 extends F {
     }
     public static void main(String[] args) {
         Test2 t1 = new Test2();
-        t1.m4(); //✅❌
+        t1.m4(); //✅
         t1.m3(); //✅
         t1.m2(); //✅
         t1.m2(); //✅
