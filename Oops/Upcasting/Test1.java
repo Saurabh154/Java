@@ -13,12 +13,15 @@ class B extends A{
 
 public class Test1 {
     public static void main(String[] args) {
-        B b1 = new B();
-        b1.m1();
-        b1.m2();
+//        B b1 = new B();
+//        b1.m1();
+//        b1.m2();
 
-        A a1 = b1;
+
+
+        A a1 = new B();
         a1.m1();
+//        a1.m1();
 //        a1.m2();
     }
 }
