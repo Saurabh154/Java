@@ -16,5 +16,19 @@ public class SetDemo {
         for(String role : roles){
             System.out.println("ROLE : " + role);
         }
+
+        Set<Integer> roll = new HashSet<>();
+        roll.add(100);
+        roll.add(101);
+        roll.add(102);
+        roll.add(103);
+
+        for(int i : roll){
+            System.out.println(i);
+        }
+
+
+
+
     }
 }

@@ -29,3 +29,6 @@ public class Test2 extends B1{
         Test2 test2 = new Test2();
     }
 }
+
+
+

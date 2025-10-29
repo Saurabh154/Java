@@ -6,14 +6,11 @@ class InnerA {
         System.out.println("Constructor");
     }
 
-    InnerA(int a, int b){
-
+    InnerA(int a, int b) {
         this();
-        i=a;
-        j=b;
-
+        i = a;
+        j = b;
     }
-    
 }
 public class A {
     public static void main(String[] args) {
