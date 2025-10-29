@@ -38,5 +38,38 @@ public class MapDemo {
             System.out.println(value);
         }
 
+
+        System.out.println("Practice over HashMap");
+
+        HashMap<Integer, String> map = new HashMap<>();
+
+        map.put(121, "Saurabh");
+        map.put(122 ,"Sagar");
+        map.put(125, "john");
+
+
+        for(Integer roll : map.keySet()){
+            System.out.println(roll);
+        }
+
+        for(String name : map.values()){
+            System.out.println(name);
+        }
+
+        System.out.println(map.get(121));
+        System.out.println(map.get(125));
+
+
+        System.out.println(map.containsValue("John"));
+        System.out.println(map.containsValue("Sagar"));
+
+
+        // travering over hashMap
+        for(Map.Entry<Integer, String>entry : map.entrySet()){
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+
+
+
     }
 }
