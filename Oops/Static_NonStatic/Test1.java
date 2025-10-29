@@ -1,4 +1,4 @@
-package Oops.Static_Non_Static;
+package Oops.Static_NonStatic;
 
 class A {
 

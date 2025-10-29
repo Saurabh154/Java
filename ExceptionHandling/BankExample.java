@@ -20,3 +20,5 @@ class BankExample {
     }
 }
 
+//🧠 withdraw() declares throws Exception
+//→ main() must handle it using try-catch.

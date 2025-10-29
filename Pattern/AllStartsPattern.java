@@ -256,8 +256,8 @@ public class AllStartsPattern {
         // PyramidStar(n);
         // HollowPyramidStar(n);
         // DiamondStar(n);
-        // HollowDiamondStar(n);
-        MirroredDiamond(n);
+         HollowDiamondStar(n);
+//        MirroredDiamond(n);
 
     }
 }

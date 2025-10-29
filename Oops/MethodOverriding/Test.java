@@ -1,4 +1,4 @@
-package Oops.Method_Overriding;
+package Oops.MethodOverriding;
 
 class Parent{
     void greet(String name){
