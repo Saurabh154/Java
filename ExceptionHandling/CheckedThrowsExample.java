@@ -24,8 +24,11 @@ public class CheckedThrowsExample {
 }
 
 
-//🧠 Explanation:
+/*
+🧠 Explanation:
 
-//readFile() declares throws IOException
+# readFile() declares throws IOException
 
-//So, whoever calls it (here main) must handle the exception using try-catch
+# So, whoever calls it (here main) must handle the exception using try-catch
+
+ */
