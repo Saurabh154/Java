@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.Throws;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

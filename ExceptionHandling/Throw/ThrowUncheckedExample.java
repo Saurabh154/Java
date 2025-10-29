@@ -1,8 +1,8 @@
-package ExceptionHandling;
+package ExceptionHandling.Throw;
 
 
 // Example 1 — Throwing Unchecked Exception
-public class ThrowExample {
+public class ThrowUncheckedExample {
     public static void main(String[] args) {
         int age = 15;
         if(age < 18) {

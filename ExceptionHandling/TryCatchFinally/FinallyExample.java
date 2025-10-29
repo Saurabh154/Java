@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.TryCatchFinally;
 
 public class FinallyExample {
     public static void main(String[] args) {

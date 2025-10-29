@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.Throw;
 
 //Example — Throwing Checked Exception
 //Checked exceptions must be declared with throws in the method signature

@@ -1,4 +1,4 @@
-package ExceptionHandling;
+package ExceptionHandling.TryCatchFinally;
 
 public class TryCatch {
     public static void main(String[] args) {
