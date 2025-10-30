@@ -21,6 +21,7 @@ class InnerB {
     }
 
 }
+
 public class B {
     public static void main(String[] args) {
         InnerB b1 = new InnerB();
@@ -29,3 +30,5 @@ public class B {
         System.out.println(b1.j);
     }
 }
+
+
