@@ -13,7 +13,7 @@
 | Inner class        | ✅                          | Nested class                |
 | Main method        | ✅                          | Can run but not instantiate |
 
-
+imp
 👉 Why 100% abstraction not possible through abstract class
 Ans : We cannot achieve 100% abstraction using abstract classes because an abstract class
 can contain both abstract and non-abstract (concrete) methods, variables, and constructors.
