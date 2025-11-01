@@ -7,6 +7,9 @@ public class CountSubstring {
 
     static int maxLengthSubstring(String str){
         //int start = 0; not need
+
+
+
         int end = 0;
         int maxLength = 0;
 

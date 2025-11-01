@@ -1,0 +1,17 @@
+/*
+| Element            | Allowed in Abstract Class? | Notes                       |
+| ------------------ | -------------------------- | --------------------------- |
+| Abstract method    | ✅                          | No body                     |
+| Concrete method    | ✅                          | Normal method               |
+| Constructor        | ✅                          | Called via subclass         |
+| Instance variables | ✅                          | For state                   |
+| Static variables   | ✅                          | Shared state                |
+| Final variables    | ✅                          | Constant                    |
+| Static methods     | ✅                          | Class-level behavior        |
+| Final methods      | ✅                          | Cannot override             |
+| Static block       | ✅                          | Initialization logic        |
+| Inner class        | ✅                          | Nested class                |
+| Main method        | ✅                          | Can run but not instantiate |
+
+
+*/

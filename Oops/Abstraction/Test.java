@@ -6,16 +6,24 @@ abstract class Animal{
 }
 
 class Cat extends Animal{
-    @Override
+   @Override
     void makeSound(){
         System.out.println("Meow Meow");
     }
 }
 
+
 class Dog extends Animal{
     @Override
     void makeSound() {
         System.out.println("Barking Barking");
+    }
+}
+
+class Elephant extends Animal{
+    @Override
+    void makeSound() {
+        System.out.println("Trumpet ");
     }
 }
 
@@ -41,5 +49,6 @@ public class Test {
         h.vaccination(new Cat());
         h.vaccination(new Dog());
         h.vaccination(new Lion());
+        h.vaccination(new Elephant());
     }
 }
