@@ -1,0 +1,41 @@
+Internal working of try-catch Block
+    # Java Virtual Machine starts executing the code inside the try block.
+    # If an exception occurs, the remaining code in the try block is skipped,
+      and the JVM starts looking for the matching catch block.
+    # If a matching catch block is found, the code in that block is executed.
+    # After the catch block, control moves to the finally block (if present).
+    # If no matching catch block is found the exception is passed to the JVM default exception handler.
+    # The final block is executed after the try catch block. regardless of whether an exception occurs or not.
+
+Key Points to Remember
+
+| Point | Description                                                                                           |
+| ----- | ----------------------------------------------------------------------------------------------------- |
+| 🔹    | `throw` is used to **explicitly throw** a single exception object.                                    |
+| 🔹    | Can throw both **checked** and **unchecked** exceptions.                                              |
+| 🔹    | Must throw an **object of Throwable class** or subclass (`Exception` or `Error`).                     |
+| 🔹    | If you throw a **checked exception**, you must declare it using **`throws`** in the method signature. |
+| 🔹    | Control immediately transfers to the **nearest catch block** or the **JVM** if not caught.            |
+
+
+Important Rules for throws
+
+| Rule | Explanation                                                                                 |
+| ---- | ------------------------------------------------------------------------------------------- |
+| 1️⃣  | Only used for **checked exceptions** (compiler-checked).                                    |
+| 2️⃣  | Can declare **multiple exceptions**, separated by commas.                                   |
+| 3️⃣  | Must appear **after the method parameters** and before the method body.                     |
+| 4️⃣  | Used only in **method declarations**, not inside the body.                                  |
+| 5️⃣  | If a method declares `throws`, the **caller must handle** (try-catch or propagate further). |
+| 6️⃣  | For unchecked exceptions, using `throws` is **optional**.                                   |
+
+
+✅ 8️⃣ throw vs throws (Interview Favorite)
+
+| Feature                  | **throw**                                  | **throws**                       |
+| ------------------------ | ------------------------------------------ | -------------------------------- |
+| **Purpose**              | To *throw* an exception explicitly         | To *declare* exceptions          |
+| **Used In**              | Inside a method or block                   | In method signature              |
+| **Number of Exceptions** | Only one at a time                         | Multiple (comma-separated)       |
+| **Followed By**          | Exception object                           | Exception class name(s)          |
+| **Example**              | `throw new IOException("File not found");` | `void read() throws IOException` |

@@ -1,0 +1,217 @@
+/*
+🧭 ROADMAP: Interface in Java (Full Deep Dive)
+
+1. Introduction – What is Interface
+2. Why Interface (vs Abstract Class)
+3. Syntax and Rules
+4. Types of Interfaces
+5. Default, Static, and Private methods
+6. Variables in Interface
+7. Multiple Inheritance using Interface
+8. Marker Interface
+9. Functional Interface
+10.Nested Interface
+11.Interface vs Abstract Class vs Class (Comparison Table)
+12.Real-World Example
+13.Top Interview Questions + Answers
+
+
+🧩 1. What is an Interface?
+
+👉 Definition:
+An interface in Java is a blueprint of a class that defines a contract
+(i.e., a set of methods) that implementing classes must follow.
+
+It is used to achieve:
+✅100% abstraction
+✅Multiple inheritance
+✅Loose coupling
+✅Common behavior define karna across different classes.
+
+👉 In simple terms:
+
+Interface tells “what to do”, not “how to do”.
+
+🧱 3. Syntax and Rules of Interface
+✅ Syntax:
+
+interface InterfaceName {
+    // implicitly public abstract methods
+    void method1();
+    void method2();
+}
+
+✅ Implementation:
+class ClassName implements InterfaceName {
+    public void method1() { ... }
+    public void method2() { ... }
+}
+
+✅ Rules:
+1. All methods are public and abstract by default.
+2. Variables in interface are public static final by default.
+3. You cannot create object of an interface.
+4. A class implements an interface, not extends it.
+5. An interface can extend another interface, but cannot extend a class.
+6. A class can implement multiple interfaces.
+
+
+🧩 8. Marker Interface
+
+👉 Interface with no methods and no fields.
+Used to mark or tag a class for special behavior.
+
+Examples in Java:
+
+    # Serializable
+    # Cloneable
+    # Remote
+
+interface Marker {}
+
+class MyClass implements Marker {
+    // just tagged
+}
+
+⚙️ 9. Functional Interface (Java 8+)
+
+Interface with exactly one abstract method.
+
+@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);
+}
+
+
+✅ Used in Lambda Expressions:
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator c = (a, b) -> a + b;  // Lambda
+        System.out.println(c.add(5, 10));
+    }
+}
+
+
+Common functional interfaces in java.util.function:
+
+    # Predicate<T>
+    # Function<T,R>
+    # Supplier<T>
+    # Consumer<T>
+
+⚙️ 10. Nested Interface
+
+Interface defined inside another class or interface.
+
+class Outer {
+    interface Inner {
+        void display();
+    }
+}
+
+class Demo implements Outer.Inner {
+    public void display() {
+        System.out.println("Nested Interface Example");
+    }
+}
+
+
+
+🎯 Top INTERVIEW QUESTIONS
+
+🔹 Q1: Can an interface have a constructor?
+Ans: ❌ No, because we cannot create objects of an interface.
+
+🔹 Q2: Can interface extend another interface?
+Ans: ✅ Yes, and it can extend multiple interfaces.
+interface A {}
+interface B extends A {}
+
+🔹 Q3: Can a class implement multiple interfaces?
+Ans: ✅ Yes — this enables multiple inheritance.
+
+🔹 Q4: Can an interface have a main() method?
+Ans: ✅ Yes (since Java 8) because static methods are allowed.
+
+🔹 Q5: What is the difference between abstract class and interface?
+Ans:
+Abstract class: partial abstraction, single inheritance
+Interface: full abstraction, multiple inheritance
+
+🔹 Q6: Can interface contain variables?
+Ans: ✅ Yes, but they are public static final constants.
+
+🔹 Q7: What happens if two interfaces have same default method?
+Ans: Class must override it to resolve ambiguity.
+
+interface A { default void show() { System.out.println("A"); } }
+interface B { default void show() { System.out.println("B"); } }
+
+class C implements A, B {
+    public void show() {
+        A.super.show(); // or custom logic
+    }
+}
+
+🔹 Q9: Can an interface implement another interface?
+Ans: ❌ No, only extend is allowed, not implement.
+
+🔹 Q10: What is a functional interface? Example?
+Ans:
+An interface with only one abstract method, used in Lambda expressions.
+Example: Runnable, Comparable, or user-defined with @FunctionalInterface.
+
+
+
+
+🧭 What comes inside Interface
+
+1️⃣ Abstract Methods
+By default, interface ke sare methods public aur abstract hote hain.
+
+interface Animal {
+    void sound();   // public and abstract by default
+    void eat();
+}
+👉 Implement karne wali class ko sab methods override karne padte hain.
+
+2️⃣ Constants (Variables)
+
+Inside Interface we can write variables, but wo automatically public, static, final hote hain.
+
+interface Config {
+    int MAX_USERS = 100;   // public static final by default
+}
+
+System.out.println(Config.MAX_USERS);
+
+3️⃣ Static Methods (Java 8+)
+interface MathUtils {
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+✅ Access:
+System.out.println(MathUtils.add(5, 10)); // 15
+
+🎯 INTERVIEW QUESTIONS on This Topic
+Q1. What members can an interface contain?
+Abstract methods, constants, static methods, default methods,
+private methods, nested types (interfaces/classes/enums/records).
+
+Q2. Can interface have constructor?
+❌ No, because it cannot be instantiated.
+
+Q3. Can interface have main() method?
+✅ Yes, since static methods are allowed.
+
+Q4. Are variables inside interface always final?
+✅ Yes, they are public static final by default.
+
+Q5. Can interface contain private method?
+✅ Yes, from Java 9 onward — used internally for code reuse.
+
+
+
+*/
