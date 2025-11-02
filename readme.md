@@ -1,1 +1,1 @@
-this repository contains all the pattern programming
+this repository contains all the concepts of java + advanced java
