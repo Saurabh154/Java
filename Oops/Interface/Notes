@@ -213,5 +213,4 @@ Q5. Can interface contain private method?
 ✅ Yes, from Java 9 onward — used internally for code reuse.
 
 
-
 */

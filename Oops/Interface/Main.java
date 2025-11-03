@@ -2,6 +2,12 @@ package Oops.Interface;
 
 interface PaymentGateway {
     void pay(double amount);
+    default void add(){
+        System.out.println("heii");
+    }
+    static void sum(){
+        System.out.println("hjkdfhua");
+    }
 }
 
 class Paytm implements PaymentGateway {
@@ -20,6 +26,10 @@ public class Main {
     public static void main(String[] args) {
         PaymentGateway p = new Paytm();
         p.pay(500);
+
+        p.add();
+        PaymentGateway.sum();
+
     }
 }
 

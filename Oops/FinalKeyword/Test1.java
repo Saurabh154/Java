@@ -1,6 +1,6 @@
 package Oops.FinalKeyword;
 
- class Circle{
+class Circle{
     int radius = 10;
 }
 
@@ -9,7 +9,17 @@ final class B extends Circle{
     {
         i=20;
     }
+
+    final void add(int a, int b){
+        System.out.println(a+b);
+    }
+    final void add(int a, int b, int c){
+        System.out.println(a+b+c);
+    }
 }
+
+//class I extends B -> cann't do
+
 public class Test1 {
     public static void main(String[] args) {
 //        final Circle c1 = new Circle();

@@ -17,6 +17,7 @@ abstract class ComesInsideAbstractClass  {
 
     // 4. Instance variables (non-static fields)
     String name = "Dog";
+
     ComesInsideAbstractClass(String name) {
         this.name = name;
         System.out.println("Name of Animal is : " + this.name);
@@ -47,6 +48,9 @@ abstract class ComesInsideAbstractClass  {
 
 class Helper extends ComesInsideAbstractClass{
 
+//    Helper(){
+//        super("Saurabh");
+//    }
     @Override
     void sound() {
         System.out.println("Must to override the abstract methods");
