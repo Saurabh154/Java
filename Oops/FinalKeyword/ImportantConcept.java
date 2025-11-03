@@ -4,7 +4,10 @@ package Oops.FinalKeyword;
 class P{
     final int a=10;
     final static int b=20;
-
+    final int i;
+    P(){
+      i = 20;
+    }
     final void display(){
         System.out.println("Final non-static method");
     }
@@ -38,6 +41,7 @@ public class ImportantConcept {
         System.out.println("Parent class static methods : ");
         q.display();
 
+        System.out.println(q.i);
 
     }
 }
