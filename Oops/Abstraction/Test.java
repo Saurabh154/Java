@@ -45,7 +45,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Hospital h = new Hospital();
+        Hospital h = new Hospital();  // loose coupling
         h.vaccination(new Cat());
         h.vaccination(new Dog());
         h.vaccination(new Lion());

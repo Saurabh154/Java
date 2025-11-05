@@ -12,8 +12,8 @@ public class WordPattern {
         HashMap<Character, String>map = new HashMap<>();
         for(int i=0; i< pattern.length(); i++){
 
-            char ch = pattern.charAt(i);
-//            map.put(ch, map.getOrDefault(ch, )+1);
+            char ch = pattern.charAt(i);//            map.put(ch, map.getOrDefault(ch, Character[i])+1);
+
         }
 
         return false;

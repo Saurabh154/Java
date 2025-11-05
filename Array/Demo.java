@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Demo {
-    public static void main(String[] args) {
 
+    int x;
+
+    public static void main(String[] args) {
 
         int[] arr = new int[5];
 
@@ -57,6 +59,12 @@ public class Demo {
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i] + " ");
         }
+
+
+
+        Object[] o = new Object[10];
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(12);
     }
 
 }

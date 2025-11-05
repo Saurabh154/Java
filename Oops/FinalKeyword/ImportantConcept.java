@@ -5,6 +5,9 @@ class P{
     final int a=10;
     final static int b=20;
     final int i;
+
+    int k; // kab call hoga object class
+
     P(){
       i = 20;
     }

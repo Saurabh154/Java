@@ -1,35 +1,67 @@
 package Oops.Interface;
 
+//Loose Coupling Example
+
+
 interface PaymentGateway {
-    void pay(double amount);
-    default void add(){
-        System.out.println("heii");
-    }
-    static void sum(){
-        System.out.println("hjkdfhua");
-    }
+    abstract void payment();
+    void refund();
 }
 
 class Paytm implements PaymentGateway {
-    public void pay(double amount) {
-        System.out.println("Paid " + amount + " via Paytm");
+
+    @Override
+    public void payment() {
+        System.out.println("Payment done by PAYTM");
+    }
+
+    @Override
+    public void refund() {
+        System.out.println("Refund done by PAYTM");
     }
 }
 
-class PhonePe implements PaymentGateway {
-    public void pay(double amount) {
-        System.out.println("Paid " + amount + " via PhonePe");
+
+class PhonePay implements PaymentGateway {
+
+    @Override
+    public void payment() {
+        System.out.println("Payment done by PHONE PAY");
+    }
+
+    @Override
+    public void refund() {
+        System.out.println("Payment done by PHONE PAY");
     }
 }
+
+class GooglePay implements PaymentGateway {
+
+    @Override
+    public void payment() {
+        System.out.println("Payment done by GOOGLE PAY");
+    }
+
+    @Override
+    public void refund() {
+        System.out.println("Payment done by GOOGLE PAY");
+    }
+}
+
+class MakePayment{
+    void doPaymentBy(PaymentGateway p){
+        p.payment();
+        p.refund();
+    }
+}
+
 
 public class Main {
     public static void main(String[] args) {
-        PaymentGateway p = new Paytm();
-        p.pay(500);
-
-        p.add();
-        PaymentGateway.sum();
-
+        MakePayment  mp = new MakePayment();
+        mp.doPaymentBy(new Paytm());
+        mp.doPaymentBy(new PhonePay());
+        mp.doPaymentBy(new GooglePay());
     }
 }
 
