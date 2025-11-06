@@ -1,4 +1,4 @@
-package FunctionalInterface;
+package Oops.FunctionalInterface;
 
 @FunctionalInterface
 interface BookAction{

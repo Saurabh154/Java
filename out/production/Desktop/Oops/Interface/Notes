@@ -77,7 +77,7 @@ class MyClass implements Marker {
 
 Interface with exactly one abstract method.
 
-@FunctionalInterface
+@Oops.FunctionalInterface
 interface Calculator {
     int add(int a, int b);
 }
@@ -160,7 +160,7 @@ Ans: ❌ No, only extend is allowed, not implement.
 🔹 Q10: What is a functional interface? Example?
 Ans:
 An interface with only one abstract method, used in Lambda expressions.
-Example: Runnable, Comparable, or user-defined with @FunctionalInterface.
+Example: Runnable, Comparable, or user-defined with @Oops.FunctionalInterface.
 
 
 
