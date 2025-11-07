@@ -15,17 +15,17 @@ public class Book {
     // To add book details
     public Book()
     {
-        System.out.println("Enter Serial No of Book:");
+        System.out.print("Enter Serial No of Book: ");
         this.sNo = input.nextInt();
         input.nextLine();
 
-        System.out.println("Enter Book Name:");
+        System.out.print("Enter Book Name: ");
         this.bookName = input.nextLine();
 
-        System.out.println("Enter Author Name:");
+        System.out.print("Enter Author Name: ");
         this.authorName = input.nextLine();
 
-        System.out.println("Enter Quantity of Books:");
+        System.out.print("Enter Quantity of Books: ");
         this.bookQty = input.nextInt();
         bookQtyCopy = this.bookQty;
     }

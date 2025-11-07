@@ -12,12 +12,10 @@ public class Student {
     // Constructor
     public Student()
     {
-        // Print statement
-        System.out.println("Enter Student Name:");
+        System.out.print("Enter Student Name : ");
         this.studentName = input.nextLine();
 
-        // Print statement
-        System.out.println("Enter Registration Number:");
+        System.out.println("Enter Registration Number: ");
         this.regNum = input.nextLine();
     }
 }
