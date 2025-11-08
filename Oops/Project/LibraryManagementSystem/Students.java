@@ -12,8 +12,8 @@ public class Students {
 
     public void addStudent(Student student) {
         for(int i=0; i<count; i++){
-            if(student.regNum.equalsIgnoreCase(theStudents[i].regNum)){
-                System.out.println("Student of Reg Num " + student.regNum
+            if(student.getRegNum().equalsIgnoreCase(theStudents[i].getRegNum())){
+                System.out.println("Student of Reg Num " + student.getRegNum()
                 + " is Already Registered.");
                 return;
             }
@@ -33,8 +33,8 @@ public class Students {
         // corresponding registered number
         System.out.println("===Students Details===");
         for(int i=0; i<count; i++){
-            System.out.println("Name : " + theStudents[i].studentName);
-            System.out.println("Registration Num : " + theStudents[i].regNum);
+            System.out.println("Name : " + theStudents[i].getStudentName());
+            System.out.println("Registration Num : " + theStudents[i].getRegNum());
             System.out.println();
         }
     }

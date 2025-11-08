@@ -3,11 +3,11 @@ package Oops.Project.LibraryManagementSystem;
 import java.util.Scanner;
 public class Book {
     // Class data members
-    public int sNo;
-    public String bookName;
-    public String authorName;
-    public int bookQty;
-    public int bookQtyCopy;
+    private int sNo;
+    private String bookName;
+    private String authorName;
+    private int bookQty;
+    private int bookQtyCopy;
 
     // read input from users
     Scanner input = new Scanner(System.in);
@@ -28,5 +28,45 @@ public class Book {
         System.out.print("Enter Quantity of Books: ");
         this.bookQty = input.nextInt();
         bookQtyCopy = this.bookQty;
+    }
+
+    public int getsNo() {
+        return sNo;
+    }
+
+    public void setsNo(int sNo) {
+        this.sNo = sNo;
+    }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public int getBookQty() {
+        return bookQty;
+    }
+
+    public void setBookQty(int bookQty) {
+        this.bookQty = bookQty;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public int getBookQtyCopy() {
+        return bookQtyCopy;
+    }
+
+    public void setBookQtyCopy(int bookQtyCopy) {
+        this.bookQtyCopy = bookQtyCopy;
     }
 }

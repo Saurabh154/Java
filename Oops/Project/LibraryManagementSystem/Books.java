@@ -34,12 +34,12 @@ public class Books {
 
 
     public int compareBookObjects(Book b1, Book b2) {
-        if (b1.bookName.equalsIgnoreCase(b2.bookName)) {
+        if (b1.getBookName().equalsIgnoreCase(b2.getBookName())) {
             System.out.println("Book of this Name Already Exists.");
             return 0;
         }
 
-        if (b1.sNo == b2.sNo) {
+        if (b1.getsNo() == b2.getsNo()) {
             System.out.println("Book of this Serial No Already Exists.");
             return 0;
         }
@@ -70,11 +70,11 @@ public class Books {
         System.out.println("=== SHOWING ALL BOOKS === \n");
 
         for(int i=0; i<count; i++){
-            System.out.println("S.No : " + theBooks[i].sNo );
-            System.out.println("Name : " + theBooks[i].bookName );
-            System.out.println("Author : " + theBooks[i].authorName );
-            System.out.println("Available Qty : " + theBooks[i].bookQtyCopy );
-            System.out.println("Total Qty : " + theBooks[i].bookQty );
+            System.out.println("S.No : " + theBooks[i].getsNo() );
+            System.out.println("Name : " + theBooks[i].getBookName() );
+            System.out.println("Author : " + theBooks[i].getAuthorName() );
+            System.out.println("Available Qty : " + theBooks[i].getBookQtyCopy() );
+            System.out.println("Total Qty : " + theBooks[i].getBookQty() );
             System.out.println();
         }
 
@@ -90,12 +90,12 @@ public class Books {
         sNo = input.nextInt();
 
         for(int i=0 ;i <count; i++){
-            if(sNo == theBooks[i].sNo){
-                System.out.println("S.No : " + theBooks[i].sNo );
-                System.out.println("Name : " + theBooks[i].bookName );
-                System.out.println("Author : " + theBooks[i].authorName );
-                System.out.println("Available Qty : " + theBooks[i].bookQtyCopy );
-                System.out.println("Total Qty : " + theBooks[i].bookQty );
+            if(sNo == theBooks[i].getsNo()){
+                System.out.println("S.No : " + theBooks[i].getsNo() );
+                System.out.println("Name : " + theBooks[i].getBookName() );
+                System.out.println("Author : " + theBooks[i].getAuthorName() );
+                System.out.println("Available Qty : " + theBooks[i].getBookQtyCopy() );
+                System.out.println("Total Qty : " + theBooks[i].getBookQty() );
                 System.out.println();
                 return;
             }
@@ -116,13 +116,13 @@ public class Books {
 
         for(int i=0 ; i<count; i++){
             // if author matches any of its book
-            if(authorName.equalsIgnoreCase(theBooks[i].authorName)){
+            if(authorName.equalsIgnoreCase(theBooks[i].getAuthorName())){
                 // Print corresponding credentials
-                System.out.println("S.No : " + theBooks[i].sNo );
-                System.out.println("Name : " + theBooks[i].bookName );
-                System.out.println("Author : " + theBooks[i].authorName );
-                System.out.println("Available Qty : " + theBooks[i].bookQtyCopy );
-                System.out.println("Total Qty : " + theBooks[i].bookQty );
+                System.out.println("S.No : " + theBooks[i].getsNo() );
+                System.out.println("Name : " + theBooks[i].getBookName() );
+                System.out.println("Author : " + theBooks[i].getAuthorName() );
+                System.out.println("Available Qty : " + theBooks[i].getBookQtyCopy() );
+                System.out.println("Total Qty : " + theBooks[i].getBookQty() );
                 System.out.println();
                 return;
             }
@@ -143,15 +143,22 @@ public class Books {
         int sNo = input.nextInt();
 
         for(int i=0; i<count; i++){
-            if (sNo == theBooks[i].sNo) {
+            if (sNo == theBooks[i].getsNo()) {
 
                 // Display message
                 System.out.println(
                         "Enter No of Books to be Added:");
 
                 int addQty = input.nextInt();
-                theBooks[i].bookQty += addQty;
-                theBooks[i].bookQtyCopy += addQty;
+//                theBooks[i].bookQty += addQty;
+
+                int updatedQnty= theBooks[i].getBookQty() + addQty;
+                theBooks[i].setBookQty(updatedQnty);
+
+                int updateCopy = theBooks[i].getBookQtyCopy() + addQty;
+                theBooks[i].setBookQtyCopy(updateCopy);
+
+//                theBooks[i].bookQtyCopy += addQty;
 
                 // Success message
                 System.out.println("Book quantity upgraded!!");

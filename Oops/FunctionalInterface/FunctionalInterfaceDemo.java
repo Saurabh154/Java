@@ -3,11 +3,14 @@ package Oops.FunctionalInterface;
 @FunctionalInterface
 interface BookAction{
     void perform();
+    String toString();
+    int hashCode();
+    boolean equals(Object obj);
 }
 
 // Functional Interface with Parameters
 @FunctionalInterface
-interface Operation{
+interface Operation {
     int add(int a, int b);
 }
 
