@@ -1,0 +1,45 @@
+🧩 1️⃣ What is a LinkedList?
+
+In simple words:
+
+A LinkedList is a data structure where elements (called nodes)
+are connected using links (pointers) instead of being stored in a
+continuous block of memory like an array.
+
+| Feature           | Array                      | LinkedList                      |
+| ----------------- | -------------------------- | ------------------------------- |
+| **Storage**       | Continuous memory          | Non-continuous (nodes linked)   |
+| **Access speed**  | Fast (index-based)         | Slow (traverse from start)      |
+| **Insert/Delete** | Expensive (shift elements) | Easy (change links only)        |
+| **Memory usage**  | Less (only data)           | More (data + link to next node) |
+
+
+class Node{
+    int data;  // data part
+    Node next; // link to next node
+
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+🧩 1️⃣ — Why class Node?
+=> LinkedList is a collection of nodes.
+=> Each node has 2 things
+    1. Data (value) — jo actual element store karta hai
+    2. Next (link/reference) — jo next node ka address store karta hai
+
+🧠 Isliye hume ek custom data type banana padta hai jisme dono cheeze ho.
+
+👉 Aur usi custom type ko hum Node bolte hain.
+class Node {
+    int data;  // value
+    Node next; // reference to next node
+}
+
+
+🧩 2️⃣ — Why Node next; likha, int next; ya String next; kyu nahi?
+Bahut simple logic 👇
+    # next ka kaam hota hai next node ka address store karna.
+    # Har next node ka type bhi Node hi hota hai
