@@ -1,4 +1,4 @@
-package Strings.School_Level;
+package DataStructure.Strings.School_Level;
 
 public class Problem {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Array;
+package DataStructure.Array;
 
 public class SortArray {
     public static void main(String[] args) {

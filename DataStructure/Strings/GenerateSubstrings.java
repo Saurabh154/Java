@@ -1,5 +1,5 @@
-package Strings;
-import java.util.*;
+package DataStructure.Strings;
+
 public class GenerateSubstrings {
     public static void main(String[] args) {
         

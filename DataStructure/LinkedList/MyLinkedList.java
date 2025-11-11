@@ -40,6 +40,7 @@ public class MyLinkedList {
             curr = curr.next;
         }
         curr.next = newNode;
+
     }
 
     public void addFirst(int data){

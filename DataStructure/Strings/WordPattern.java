@@ -1,4 +1,4 @@
-package Strings;
+package DataStructure.Strings;
 
 import java.util.HashMap;
 

@@ -1,6 +1,5 @@
-package Array;
+package DataStructure.Array;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class CountOccurence {
