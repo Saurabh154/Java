@@ -19,3 +19,4 @@ public class Main {
         notification.send("Hello, user!!");
     }
 }
+
