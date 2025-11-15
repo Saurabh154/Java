@@ -1,4 +1,4 @@
-package DataStructure.Strings;
+package DataStructure.Strings.Methods.Substring;
 
 import java.util.ArrayList;
 import java.util.HashMap;

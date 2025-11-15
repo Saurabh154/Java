@@ -1,4 +1,4 @@
-package DataStructure.Strings;
+package DataStructure.Strings.Methods.Substring;
 
 public class GenerateSubstrings {
     public static void main(String[] args) {
