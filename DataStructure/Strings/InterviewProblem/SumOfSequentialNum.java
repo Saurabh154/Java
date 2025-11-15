@@ -1,4 +1,4 @@
-package DataStructure.Strings.RaveeshSir;
+package DataStructure.Strings.InterviewProblem;
 
 public class SumOfSequentialNum {
     public static void main(String[] args) {
