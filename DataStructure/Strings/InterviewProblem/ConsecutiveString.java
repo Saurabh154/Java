@@ -1,34 +1,30 @@
 package DataStructure.Strings.InterviewProblem;
 
+import java.util.Stack;
+
 public class ConsecutiveString {
     public static void main(String[] args) {
 
-        // s = abbcccdde
-        // s = abcde
+        String s = "success";
+        Stack<Character> st = new Stack<>();
 
-        String s = "success";  // suces
+        st.push(s.charAt(0));
 
-
-        // logic - stack
-
-        String res="";
-
-        int[] a = new int[26];
-
-        for(int i=0; i<s.length(); i++){
+        for (int i = 1; i < s.length(); i++) {
             char ch = s.charAt(i);
-            int index = (int)ch - 97;
-            a[index]++;
-        }
 
-        for(int i=0; i<a.length; i++){
-            char ch = (char)(i + 97);
-            if(a[i] != 0){
-                res += ch;
+            if (!st.isEmpty() && st.peek() == ch) {
+                continue;
+            } else {
+                st.push(ch);
             }
         }
 
-        System.out.println(res);
+        String res = "";
+        for (char c : st) {
+            res += c;
+        }
 
+        System.out.println(res);
     }
 }
