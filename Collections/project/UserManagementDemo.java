@@ -11,37 +11,37 @@ public class UserManagementDemo {
 
         List<User> users = new ArrayList<>();
 
-        users.add(user1);
+//        users.add(user1);
 
         Set<String> user2Roles = new HashSet<>(Arrays.asList("MANAGER"));
         User user2 = new User("Saurabh", false, user2Roles);
-        users.add(user2);
+//        users.add(user2);
 
         Set<String> user3Roles = new HashSet<>(Arrays.asList("MANAGER", "ADMIN", "USER"));
         User user3 = new User("Rajat", true, user3Roles);
-        users.add(user3);
+//        users.add(user3);
 
         // Another way
-        users.add(new User("Bob", false,
-                new HashSet<>(Arrays.asList("USER","ADMIN"))));
+//        users.add(new User("Bob", false,
+//                new HashSet<>(Arrays.asList("USER","ADMIN"))));
 
-        users.add(new User("Smith", true,
-                new HashSet<>(Arrays.asList("USER"))));
+//        users.add(new User("Smith", true,
+//                new HashSet<>(Arrays.asList("USER"))));
+//
+//        users.add(new User("Bob", false,
+//                new HashSet<>(Arrays.asList("USER","MANAGER"))));
 
-        users.add(new User("Bob", false,
-                new HashSet<>(Arrays.asList("USER","MANAGER"))));
-
-        users.add(new User("Blake", true,
-                new HashSet<>(Arrays.asList("LEAD","MANAGER"))));
+//        users.add(new User("Blake", true,
+//                new HashSet<>(Arrays.asList("LEAD","MANAGER"))));
 
 
         // REMOVE INACTIVE USER
         Iterator<User> iterator = users.iterator();
-        while (iterator.hasNext()){
-            if(!iterator.next().isActive()){
-                iterator.remove();
-            }
-        }
+//        while (iterator.hasNext()){
+//            if(!iterator.next().isActive()){
+//                iterator.remove();
+//            }
+//        }
 
         // PRINT ACTIVE USER
         System.out.println("1. ACTIVE USERS");
